@@ -80,7 +80,6 @@ def main(args):
     logger.close()
 
 
-
 def train(train_loader, model, criterions, optimizer):
     # prepare for refine loss
     def ohkm(loss, top_k):
@@ -145,7 +144,6 @@ def train(train_loader, model, criterions, optimizer):
     return losses.avg
 
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PyTorch CPN Training')
     parser.add_argument('-j', '--workers', default=12, type=int, metavar='N',
@@ -160,6 +158,5 @@ if __name__ == '__main__':
                         help='path to save checkpoint (default: checkpoint)')
     parser.add_argument('--resume', default='', type=str, metavar='PATH',
                         help='path to latest checkpoint')
-
 
     main(parser.parse_args())

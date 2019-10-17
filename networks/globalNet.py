@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch
 import math
 
+
 class globalNet(nn.Module):
     def __init__(self, channel_settings, output_shape, num_class):
         super(globalNet, self).__init__()
@@ -71,4 +72,4 @@ class globalNet(nn.Module):
             feature = self.predict[i](feature)
             global_outs.append(feature)
 
-        return global_fms, global_outs
+        return global_fms, global_outs #loss, refinenet的输入
